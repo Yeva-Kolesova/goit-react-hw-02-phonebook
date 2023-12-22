@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Filter = ({ value, onChange }) => {
-  return (
-    <input
-      type="text"
-      value={value}
-      onChange={onChange}
-      placeholder="Search contacts..."
-    />
-  );
-};
+class Filter extends Component {
+  render() {
+    const { value, onChange } = this.props;
+
+    return (
+      <input
+        type="text"
+        value={value}
+        onChange={onChange}
+        placeholder="Search contacts..."
+      />
+    );
+  }
+}
 
 export default Filter;
